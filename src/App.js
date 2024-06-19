@@ -1,9 +1,10 @@
-import './App.css'
-import Card from './components/Card'
+import CardItem from './components/CardItem'
 
-const cardsData = [
+import './App.css'
+
+const cardsList = [
   {
-    id: '1',
+    id: 1,
     title: 'Data Scientist',
     description:
       'Data scientists gather and analyze large sets of structured and unstructured data',
@@ -11,7 +12,7 @@ const cardsData = [
     className: 'card-1',
   },
   {
-    id: '2',
+    id: 2,
     title: 'IOT Developer',
     description:
       'IoT Developers are professionals who can develop, manage, and monitor IoT devices.',
@@ -19,7 +20,7 @@ const cardsData = [
     className: 'card-2',
   },
   {
-    id: '3',
+    id: 3,
     title: 'VR Developer',
     description:
       'A VR developer creates completely new digital environments that people can see.',
@@ -27,7 +28,7 @@ const cardsData = [
     className: 'card-3',
   },
   {
-    id: '4',
+    id: 4,
     title: 'ML Engineer',
     description:
       'Machine learning engineers feed data into models defined by data scientists.',
@@ -45,9 +46,9 @@ const App = () => (
         Intel, Nvidia, Qualcomm, etc. Learn directly from professionals involved
         in Product Development.
       </p>
-      <ul className="cards-container">
-        {cardsData.map(cardData => (
-          <Card cardData={cardData} key={cardData.id} />
+      <ul className="cards-list">
+        {cardsList.map(eachCard => (
+          <CardItem cardDetails={eachCard} key={eachCard.id} />
         ))}
       </ul>
     </div>
